@@ -16,10 +16,10 @@ This repository contains a corpus created from the Oxford Dictionary of English.
 
 ## Potential Uses
 
-- **Text Generation:**
-- **Question Answering (QA):**
-- **Text Classification:**
-- **And More:**
+- **Text Generation**
+- **Question Answering (QA)**
+- **Text Classification**
+- **And More**
 
 ## Getting Started
 
