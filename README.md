@@ -44,10 +44,6 @@ Please ensure to update the script with the correct file paths on your system be
 
 Contributions to the Oxford Dictionary of English Corpus are welcome! Please feel free to fork the repository, make changes, and submit pull requests.
 
-## License
-
-This project is open-source and available under the [MIT License](LICENSE). The original Oxford English Dictionary text file is obtained from an external source and may be subject to its own terms and conditions.
-
 ## Acknowledgments
 
 - Original Oxford English Dictionary text file obtained from [sujithps/Dictionary](https://github.com/sujithps/Dictionary).
