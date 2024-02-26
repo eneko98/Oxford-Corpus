@@ -25,11 +25,11 @@ No additional external libraries are required.
 
 1. Clone this repository to your local machine:
     ```
-    git clone https://github.com/yourusername/your-repository-name.git
+    git clone https://github.com/eneko98/Oxford-Corpus.git
     ```
 2. Navigate to the repository directory:
     ```
-    cd your-repository-name
+    cd Oxford-Corpus
     ```
 3. Open the `data_parser.py` script in a text editor. You will need to modify the script to include the paths to    your local copy of the `Oxford English Dictionary.txt` file and the output path for the `oxford_corpus.json` file. Look for placeholders or comments in the script that indicate where to insert these paths.
 4. After updating the file paths, save the script and run it to parse the Oxford English Dictionary text file and generate the JSON corpus:
