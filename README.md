@@ -1,12 +1,25 @@
 # Oxford Dictionary of English Corpus
 
-This repository contains a corpus created from the Oxford Dictionary of English. It includes the original text file of the Oxford English Dictionary, a Python script for parsing the dictionary text, and the resulting corpus in JSON format.
+This repository contains a corpus created from the Oxford Dictionary of English. It includes the original text file of the Oxford English Dictionary, a Python script for parsing the dictionary text, and the resulting corpus in JSON format. The corpus can serve as a valuable resource for fine-tuning various models for tasks such as text generation, question answering (QA), classification, and more.
+
+
 
 ## Contents
 
 - `Oxford English Dictionary.txt` - The original text file of the Oxford Dictionary of English. Obtained from [sujithps/Dictionary on GitHub](https://github.com/sujithps/Dictionary/blob/master/Oxford%20English%20Dictionary.txt).
 - `data_parser.py` - A Python script used to extract and parse the text file into a structured format.
 - `oxford_corpus.json` - The extracted corpus in JSON format, created using the `data_parser.py` script.
+
+## Corpus Statistics
+
+- **Total Entries in the Corpus:** 22,879
+
+## Potential Uses
+
+- **Text Generation:**
+- **Question Answering (QA):**
+- **Text Classification:**
+- **And More:**
 
 ## Getting Started
 
