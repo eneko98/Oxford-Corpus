@@ -1,14 +1,12 @@
 # Oxford Dictionary of English Corpus
 
-This repository contains a corpus created from the Oxford Dictionary of English. It includes the original text file of the Oxford English Dictionary, a Python script for parsing the dictionary text, and the resulting corpus in JSON format. The corpus can serve as a valuable resource for fine-tuning various models for tasks such as text generation, question answering (QA), classification, and more.
-
-
+This repository contains a corpus created from the Oxford Dictionary of English. It includes the original text file of the Oxford English Dictionary, a Python script for parsing the dictionary text, and the resulting corpus in JSON format. Each entry in the corpus contains the word, its Part of Speech (POS), and the definition, making it a valuable resource for fine-tuning various models for tasks such as text generation, question answering (QA), classification, and more.
 
 ## Contents
 
 - `Oxford English Dictionary.txt` - The original text file of the Oxford Dictionary of English. Obtained from [sujithps/Dictionary on GitHub](https://github.com/sujithps/Dictionary/blob/master/Oxford%20English%20Dictionary.txt).
-- `data_parser.py` - A Python script used to extract and parse the text file into a structured format.
-- `oxford_corpus.json` - The extracted corpus in JSON format, created using the `data_parser.py` script.
+- `data_parser.py` - A Python script used to extract and parse the text file into a structured format. The script processes each entry to include the word, its Part of Speech (POS), and definition in the JSON format.
+- `oxford_corpus.json` - The extracted corpus in JSON format, created using the `data_parser.py` script. The corpus contains detailed entries for each word, including its definition and POS tag.
 
 ## Corpus Statistics
 
@@ -16,10 +14,12 @@ This repository contains a corpus created from the Oxford Dictionary of English.
 
 ## Potential Uses
 
+The Oxford Dictionary of English Corpus is versatile and can be used for a variety of computational linguistics and machine learning tasks, including but not limited to:
+
 - **Text Generation**
 - **Question Answering (QA)**
-- **Text Classification**
-- **And More**
+- **Text Classification:**
+- **And More:**
 
 ## Getting Started
 
@@ -44,7 +44,7 @@ No additional external libraries are required.
     ```
     cd Oxford-Corpus
     ```
-3. Open the `data_parser.py` script in a text editor. You will need to modify the script to include the paths to    your local copy of the `Oxford English Dictionary.txt` file and the output path for the `oxford_corpus.json` file. Look for placeholders or comments in the script that indicate where to insert these paths.
+3. Open the `data_parser.py` script in a text editor. You will need to modify the script to include the paths to your local copy of the `Oxford English Dictionary.txt` file and the output path for the `oxford_corpus.json` file. Look for placeholders or comments in the script that indicate where to insert these paths.
 4. After updating the file paths, save the script and run it to parse the Oxford English Dictionary text file and generate the JSON corpus:
     ```
     python data_parser.py
