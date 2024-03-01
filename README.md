@@ -44,7 +44,7 @@ No additional external libraries are required.
     ```
     cd Oxford-Corpus
     ```
-3. Open the `data_parser.py` script in a text editor. You will need to modify the script to include the paths to your local copy of the `Oxford English Dictionary.txt` file and the output path for the `oxford_corpus.json` file. Look for placeholders or comments in the script that indicate where to insert these paths.
+3. Open the `data_parser.py` script in a text editor. You might need to modify the script to include the paths to your local copy of the `Oxford English Dictionary.txt` file and the output path for the `oxford_corpus.json` file. Look for placeholders or comments in the script that indicate where to insert these paths.
 4. After updating the file paths, save the script and run it to parse the Oxford English Dictionary text file and generate the JSON corpus:
     ```
     python data_parser.py
