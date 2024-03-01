@@ -2,33 +2,35 @@ import json
 import re
 
 """Some of the words have multiple definitions. 
-I think this my be a problem if you want to train a model 
+I think this may be a problem if you want to train a model 
 as this multiple entries might confuse it.
-THat's why this further cleaning is made"""
+That's why this further cleaning is made"""
 
 def process_entry(entry):
     parts = re.split(r'(?<=\.)\s(?=\d+\s)', entry['definition'], maxsplit=1)
     cleaned_parts = [part.strip().rstrip('.') for part in parts if part and part.strip()]
     new_entry = {
         "word": entry['word'],
-        "pos": entry['pos']
+        "pos": entry['pos'],
+        "definitions": []
     }
 
     def remove_leading_number(definition):
-        cleaned_definition = re.sub(r'\b1\s+', '', definition)
+        cleaned_definition = re.sub(r'(?<=\))\s1\s', ' ', definition)
+        cleaned_definition = re.sub(r'(?<=\w)\s1\s', ' ', cleaned_definition)
+        cleaned_definition = re.sub(r'^1\s+', '', cleaned_definition)
         cleaned_definition = re.sub(r'\(\s*1\s*\)\s*', '', cleaned_definition)
+        cleaned_definition = re.sub(r'\[\s*1\s*\]\s*', '', cleaned_definition)
         return cleaned_definition.strip()
 
+    if cleaned_parts:
+        new_entry['definitions'].append(remove_leading_number(cleaned_parts[0]))
+
     if len(cleaned_parts) > 1:
-        new_entry['definition1'] = remove_leading_number(cleaned_parts[0])
         additional_defs = re.split(r'\s(\d+)\s', cleaned_parts[1])
-        definition_counter = 2
         for i in range(1, len(additional_defs), 2):
             cleaned_definition = remove_leading_number(additional_defs[i + 1])
-            new_entry[f'definition{definition_counter}'] = cleaned_definition
-            definition_counter += 1
-    else:
-        new_entry['definition1'] = remove_leading_number(cleaned_parts[0])
+            new_entry['definitions'].append(cleaned_definition)
 
     return new_entry
 
